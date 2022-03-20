@@ -22,6 +22,10 @@ Pcap4J wraps a native packet capture library ([libpcap](http://www.tcpdump.org/)
 [WinPcap](http://www.winpcap.org/), or [Npcap](https://github.com/nmap/npcap)) via [JNA](https://github.com/twall/jna)
 and provides you Java-Oriented APIs.
 
+Pcap4J 是一个用于捕捉、构建、发送数据包的java库。
+Pcap4J 通过JNA包装了本地抓包库,向外提供JAVA API。
+
+
 Contents
 --------
 
@@ -68,6 +72,11 @@ and not to be useful for making and sending packets so much. On the other hand, 
 making and sending packets. But it had a defect in capturing ICMP packets and
 its development seemed to be stopped long ago.
 That's why I started developing Pcap4j.
+
+我一直在用JAVA开发一个SNMP网络模拟器，过程中需要抓包，我发现Pcap非常有用。尽管有一些pcap的实现，比如libpcap(for UNIX) 和 WinPcap (for Windows)。因为它们都是本地库，所以为了将它们用于SNeO，需要一个Java包装后的库。经研究，我发现了3个pcap的用java写的库，[jpcap](http://jpcap.sourceforge.net/),
+[jNetPcap](http://jnetpcap.com/), and [Jpcap](http://netresearch.ics.uci.edu/kfujii/Jpcap/doc/).但jpcap和jNetPcap都不适合SNeO，因为它们似乎主要用于捕获数据包，而对于制作和发送数据包没什么用处。另一方面，Jpcap在制作和发送数据包方面看起来很有用。但它在捕获ICMP数据包方面存在缺陷，其开发似乎早就停止了。这就是我开始开发Pcap4j的原因。
+
+
 
 Features
 --------
